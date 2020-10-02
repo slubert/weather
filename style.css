@@ -1,7 +1,18 @@
-.mid{
+.pageContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
+}
+.midBox{
+    display: flex;
+    flex-direction: column;
+}
+.centerText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     width: 100%;
 }

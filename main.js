@@ -1,12 +1,25 @@
 const output = document.getElementById("output");
+const cityInput = document.getElementById("cityInput");
+const submit = document.getElementById("form")
 
-fetch(api.openweathermap.org/data/2.5/weather?q=68500&appid=356df974cc00f7134102d5135f4368d6)
-    .then(result => result.jason())
-    .then(whenLoaded)
+submit.addEventListener("submit", onSubmit)
 
-function whenLoaded(data){
-    console.log(data.temp)
+function onSubmit(e){
+    e.preventDefault
+    let place = cityInput.value;
+    
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + place + "&appid=c84bdf644399cebe626d9897429823dd&units=metric")
+        .then( res => res.json() )
+        .then(whenLoaded)
+    
+    function whenLoaded(data){
+        output.textContent = data.main.temp
+        
+        console.log(data)
+        console.log(data.main.temp)
+    }
 }
+
 
 
 
