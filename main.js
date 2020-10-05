@@ -36,6 +36,8 @@ function onSubmit(e){
         else if(data.weather[0].main === "Clear"){
             background.style.backgroundImage = "url('pics/clear.jpg')"
         }
+
+        console.log(data)
     }
 }
 
