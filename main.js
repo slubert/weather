@@ -38,6 +38,8 @@ function onSubmit(e){
         }
 
         console.log(data)
+        console.log(data.main.temp)
+        console.log(data.weather[0].main)
     }
 }
 
